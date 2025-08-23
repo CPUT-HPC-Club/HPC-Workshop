@@ -122,7 +122,7 @@ With Lmod installed, you'll now have some new commands on the terminal. Namely, 
 
 Below is an example of Lmod in use<br>
 
-![HPE module avail (user:thina)](<images/HPE module avail.png>)
+![HPE module avail (user:thina)](HPE_module_av.png)
 
 
 # Creating Modulefiles (lua and tcl)
