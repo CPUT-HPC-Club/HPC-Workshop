@@ -4,6 +4,7 @@
 
 ## Content
 
+1. [Tutorial 0](/tutorial0/README.md) - VirtualBox setup for practice
 1. [Tutorial 1](/tutorial1/README.md) - Cluster access
 1. [Tutorial 2](/tutorial2/README.md) - Cluster services
 1. [Tutorial 3](/tutorial3/README.md) - HPL
