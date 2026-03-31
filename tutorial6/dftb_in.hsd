@@ -1,0 +1,43 @@
+Geometry = GenFormat {
+  <<< "water.gen"
+}
+
+Driver = {}
+
+Parallel {
+  UseOmpThreads = Yes
+}
+
+Hamiltonian = DFTB {
+  SCC = Yes
+  SCCTolerance = 1e-6
+  MaxSCCIterations = 200
+
+  SlaterKosterFiles = Type2FileNames {
+    Prefix = "/home/<username>/dftb_workspace/dftb_parameters/3ob-3-1/"
+    Separator = "-"
+    Suffix = ".skf"
+  }
+
+  MaxAngularMomentum {
+    O = "p"
+    H = "s"
+  }
+
+  KPointsAndWeights = SupercellFolding {
+    1 0 0
+    0 1 0
+    0 0 1
+    0.0 0.0 0.0
+  }
+}
+
+Options {}
+
+Analysis {
+  WriteBandOut = No
+}
+
+ParserOptions {
+  ParserVersion = 14
+}
