@@ -183,7 +183,7 @@ After your calculation finishes, you will process and visualise the results usin
 The dptools environment must be built using the cluster's Python 3.12.6 module. The system Python is too old and will fail. Do this once:
  
 ```bash
-ml python/3.12.6
+ml python3.12/3.12.6-gcc-15.2.0
 python3 --version   # Must show 3.12.6 before continuing
  
 cd ~/dftb_workspace/dftbplus/tools/dptools/
@@ -196,7 +196,7 @@ pip install matplotlib numpy
 ```
  
 > [!CAUTION]
-> Always load `ml python/3.12.6` **before** activating the environment. The dptools package requires Python >= 3.10 and will refuse to install on the system Python.
+> Always load `ml python3.12/3.12.6-gcc-15.2.0` **before** activating the environment. The dptools package requires Python >= 3.10 and will refuse to install on the system Python.
  
 #### Step 2 - Update dftb_in.hsd to produce band output
  
