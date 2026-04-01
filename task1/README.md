@@ -1,20 +1,20 @@
-# Tutorial 1
+# Task 1
 
 The goal of this tutorial is to give you an understanding of how the network works and how to utilize the network to connect to a cluster.
 
 Lets get a basic understanding of a local area network vs wide area network.
 
-![image](/tutorial1/img/lan_wan.jpg)
+![image](/task1/img/lan_wan.jpg)
 
 For the diagram above it should be clear that the LAN ip ranges and WAN ip ranges will differ. For a PC in LAN 1 to reach a PC in LAN 2, it will have to travel out of its local network and through some external network to reach LAN 2.
 
-Always remember where your cluster is.
+Always remember where you are and where your cluster is located.
 
 ## SSH
 
 We will be using ssh to access our cluster. There are many different ssh tools. `Windows CLI` (command line interface) "cmd" , putty or MobaXterm.
 
-![image](/tutorial1/img/moba.jpg)
+![image](/task1/img/moba.jpg)
 
 Highlighted above is all the most  important features we will use.
 
@@ -129,7 +129,7 @@ Your **third task** is to add the moderators ssh key to the authorized list of k
 
 ```bash
 # Navigate to the key
-cd hpc-workshop/tutorial1/keys
+cd hpc-workshop/task1/keys
 
 # Copy the moderators key to the ssh key folder
 cp <moderators_key> ~/.ssh/.
@@ -138,20 +138,6 @@ cp <moderators_key> ~/.ssh/.
 cd ~/.ssh
 
 # add <moderators_key> to authorized list
-```
-
-## Upload created key to repo
-
-Your forth task is to upload/commit your create private ssh key to forked repo.
-
-```bash
-# Navigate to the keys folder
-cd hpc-workshop/tutorial1/keys
-
-# Copy ssh key to repo folder
-cp ~/.ssh/<private_key> .
-
-# commit and push to repo
 ```
 
 ## Final task
@@ -163,7 +149,7 @@ On the cluster machine:
 1. Navigate to the app folder
 
 ```bash
-cd ~/hpc-workshop/tutorial1/app
+cd ~/hpc-workshop/task1/app
 ```
 
 2. Edit the `code.c` file and complete the **two** incomplete functions.

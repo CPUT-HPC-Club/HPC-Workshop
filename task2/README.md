@@ -16,7 +16,7 @@ The following Linux commands will help you navigate the Linux ecosystem and mana
 | `cp <source> <destination>`| copy a file | `cp myfile ../` | 
 | `mv <source> <destination>`| move a file | `mv myfile $HOME` |
 | `echo <variable>`       | print to the screen |  `echo "hello world"` 
-| `echo <variable> >> <file>`| print to some file. note ( ">>" appends and ">" deletes file contents and Writes to the file) | `echo "helloW0rld2" >> myfile`
+| `echo <variable> >> <file>`| print to a file. note ( ">>" appends and ">" truncates and writes to the file) | `echo "helloW0rld2" >> myfile`
 | `cat <file>`| print the content of a file to the screen | `cat myfile` |
 | `cat <source file> >>  <des file>`| print the content of a file to some file| `cat myfile >>  newfile` |
 | `rm <file>` |  Deletes a file |  `rm myfile`|
@@ -28,7 +28,7 @@ The following Linux commands will help you navigate the Linux ecosystem and mana
 
 In Linux, file permissions determine who can read, write, or execute a file. The `ls -l` command displays these permissions for each file in a directory.
 
-![screenshot of file permissions](permissions.png)
+![screenshot of file permissions](img/permissions.png)
 
 - r (read) – Allows viewing the file’s contents.
 
@@ -36,7 +36,7 @@ In Linux, file permissions determine who can read, write, or execute a file. The
 
 - x (execute) – Allows executing the file if it’s a script or binary.
 
-Consider this example above for the file named test (in green):
+Consider the example above for the file named test (in green):
 - The owner (first tebogo) has read (r), write (w), and execute (x) permissions.
 
 - The group (second tebogo) and others have read (r) and execute (x) permissions.
@@ -59,7 +59,7 @@ There are two types of services in Linux:
 - System Services: Critical to system operation (e.g sshd -> used to manage remote login)
 - Application Services: Support user-installed applications (e.g httpd -> host websites)
 
-Services commands: 
+Service commands: 
 |   Command |   description |   example |
 |   ------- |   ----------- |   ------- |
 | `systemctl status <service_name>`   |Get the status of a service |   `systemctl status sshd`|
@@ -73,7 +73,7 @@ Services commands:
 
 Monitoring involves tracking resource usage such as CPU load, memory consumption, disk usage, and network activity to optimize performance and troubleshoot problems.
 
-Monitoring Commands 
+Monitoring commands 
 |   Command |   description |   example |
 |   ------- |   ----------- |   ------- |
 | `htop`, `btop`, `top`   | process viewer that displays system resource usage (CPU, memory...), running processes, and allows real-time management. |   `htop`
@@ -84,32 +84,31 @@ Monitoring Commands
 Another common system monitoring tool is **Grafana**, a visualization platform used to track system performance over time. It provides real-time dashboards, charts, and alerts by pulling data from sources like Prometheus and Node Exporter. Grafana is ideal for analyzing trends, detecting anomalies, and managing infrastructure at scale.
 
 In contrast, htop is a command-line process viewer that displays real-time system resource usage, including CPU, memory, and running processes. While Grafana focuses on historical data visualization with graphs and alerts, htop provides real-time monitoring and interactive process management.
-## 4. Documentation (Github Markdown Files)
+
+## 4. Documentation (GitHub Markdown Files)
 
 Markdown is a lightweight markup language that allows you to format text using simple syntax. GitHub uses Markdown extensively for documentation, including README files, wikis, and issue tracking.
 
-The extension for a markdown file is **.md**
+The extension for a Markdown file is **.md**
 
-Refer to the cheatsheet below and the README.md file under tutorial2, to see how markdown files work.
+Refer to the cheatsheet below and the `README.md` file under `task2` to see how Markdown files work.
 
 ![markdown_cheatsheet][def]
 
 
-[def]: markdown.jpg
+[def]: img/markdown.jpg
 
 ## TASK.
-Using your fork of the GitHub repository, create a Markdown page titled TEAMNAME.md and include the following, with commands (where applicable) and screenshots:
+Using your fork of the GitHub repository, create a Markdown page titled TEAMNAME.md in the task2 directory and include the following, with commands (where applicable) and screenshots:
 
 1. Get the status of the SSH service on the head node.
 
-2. Using systemctl, get the list of all running services on the head node.
+2. Using systemctl, get the list of all enabled and running services on the head node.
 
 3. Using htop or btop on com1 or com2, identify the SSH process.
-
-4. Using your browser on your laptop/PC, access the Grafana dashboard at 155.238.172.16:3000 and take a screenshot of the "node-exporter:9100" host.  username = admin ; password = captain_password
 
 5. Use lscpu and the grep command to get the CPU details of head and com2. Use tmux to display both windows of head and com2 simultaneously. Show the following details: architecture, number of cores, and CPU flags.
 
 6. Use journalctl (on the head node) to retrieve all SSH logs from the last hour.
 
-**The markdown file should be uploaded under the tutorial2 directory on your repo** 
+**The markdown file should be uploaded under the task2 directory on your repo** 
