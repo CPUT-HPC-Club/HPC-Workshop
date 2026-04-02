@@ -8,3 +8,8 @@ void main()
     create_folder("data");
     create_file("data", buff_group_name);
 }
+
+void help()
+{
+
+}
